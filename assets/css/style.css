@@ -86,7 +86,7 @@ button, input, select {
 :root{
 
     --primary:#0A3D62;
-    --secondary:#00B894;
+    --secondary:#0084b8;
     --accent:#FFB703;
 
     --white:#fff;
@@ -105,24 +105,57 @@ button, input, select {
 }
 
 
-/*==========================
- HEADER
-===========================*/
-
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:999;
-    transition:.4s;
-    background:#10100f;
+.header {
+    background: linear-gradient(
+        180deg,
+        #BFE9FF 0%,
+        #87CEEB 55%,
+        #6EC6F5 100%
+    );
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 3px 15px rgba(0, 70, 120, 0.15);
 }
 
-.header.sticky{
-    background:#10100f;
-    backdrop-filter:blur(15px);
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+.navbar {
+    background: transparent;
+}
+
+.navbar a {
+    color: #082B5C;
+    font-weight: 600;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #F5A900;
+}
+
+.header::before,
+.header::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    filter: blur(12px);
+    z-index: -1;
+}
+
+.header::before {
+    width: 180px;
+    height: 55px;
+    left: 8%;
+    top: 10px;
+}
+
+.header::after {
+    width: 220px;
+    height: 65px;
+    right: 10%;
+    top: 5px;
 }
 
 /*==========================
@@ -145,18 +178,10 @@ button, input, select {
     gap:6px;
 }
 
-.logo{
-    color:#fff;
-    font-size:28px;
-    font-weight:700;
-    display:flex;
-    align-items:center;
-    gap:6px;
-}
 
 .logo-icon{
-    width:105px;
-    height:105px;
+    width:125px;
+    height:auto;
 }
 
 .logo-text{
@@ -252,7 +277,7 @@ button, input, select {
 
 .menu-btn{
     display:none;
-    color:#fff;
+    color:#131212;
     font-size:28px;
     cursor:pointer;
 }
@@ -2419,3 +2444,518 @@ VEHICLE IMAGE SLIDER RESPONSIVE
 }
 
 
+
+
+/* =========================================================
+   SMILE TAXI — FULL PAGE NAVBAR COLOR THEME
+   This section intentionally overrides the older mixed
+   brown/green/navy palette so the entire page matches
+   the light-blue navbar.
+========================================================= */
+
+:root{
+    --nav-blue-1:#BFE9FF;
+    --nav-blue-2:#87CEEB;
+    --nav-blue-3:#6EC6F5;
+    --deep-blue:#082B5C;
+    --blue:#176B93;
+    --blue-soft:#EAF7FD;
+    --yellow:#F5A900;
+    --yellow-dark:#D99000;
+    --white:#FFFFFF;
+    --page:#F4FAFD;
+    --text:#40566A;
+    --border:#D8EAF3;
+    --shadow-blue:0 14px 35px rgba(8,43,92,.10);
+}
+
+/* Base */
+body{
+    background:var(--page) !important;
+    color:var(--deep-blue) !important;
+}
+
+.container{
+    width:min(1200px,92%) !important;
+}
+
+/* ================= NAVBAR ================= */
+.header{
+    background:linear-gradient(180deg,var(--nav-blue-1) 0%,var(--nav-blue-2) 55%,var(--nav-blue-3) 100%) !important;
+    box-shadow:0 5px 22px rgba(8,43,92,.16) !important;
+    border-bottom:1px solid rgba(255,255,255,.45);
+}
+
+.nav-menu a{
+    color:var(--deep-blue) !important;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active{
+    color:var(--yellow-dark) !important;
+}
+
+.nav-menu a::after{
+    background:var(--yellow) !important;
+}
+
+.logo-text h3{
+    color:var(--deep-blue) !important;
+}
+
+.logo-text span{
+    color:var(--yellow-dark) !important;
+}
+
+.btn{
+    background:linear-gradient(135deg,#FFC21A,#F0A500) !important;
+    color:#fff !important;
+    box-shadow:0 10px 25px rgba(245,169,0,.30) !important;
+}
+
+.btn:hover{
+    background:var(--yellow-dark) !important;
+}
+
+.menu-btn{
+    color:var(--deep-blue) !important;
+}
+
+/* ================= HERO ================= */
+.hero{
+    min-height:calc(100vh - 74px);
+}
+
+.hero-content h1 span{
+    color:#FFD447 !important;
+}
+
+.hero-content .tag{
+    background:rgba(8,43,92,.48) !important;
+    border:1px solid rgba(255,255,255,.35);
+}
+
+.video-btn i{
+    color:var(--deep-blue) !important;
+}
+
+/* ================= COMMON SECTION COLORS ================= */
+.services,
+.destinations,
+.about,
+.why-us,
+.airport-transfer,
+.outstation,
+.local-taxi,
+.stats,
+.fleet,
+.cta{
+    background:var(--page) !important;
+}
+
+.section-title h2,
+.section-header h2,
+.about-content h2,
+.why-content h2{
+    color:var(--deep-blue) !important;
+}
+
+.section-title span,
+.section-tag{
+    color:var(--blue) !important;
+    background:var(--blue-soft) !important;
+}
+
+.section-title p,
+.section-header p,
+.about-content p,
+.why-content p{
+    color:var(--text) !important;
+}
+
+/* ================= SERVICES ================= */
+.services{
+    background:linear-gradient(180deg,#F8FDFF 0%,#EAF7FD 100%) !important;
+}
+
+.service-card{
+    background:#fff !important;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-blue) !important;
+}
+
+.service-card::before{
+    background:var(--nav-blue-3) !important;
+}
+
+.service-icon{
+    background:linear-gradient(135deg,var(--deep-blue),var(--blue)) !important;
+    color:#fff !important;
+}
+
+.service-card h3{
+    color:var(--deep-blue) !important;
+}
+
+.service-card p{
+    color:var(--text) !important;
+}
+
+.price strong{
+    color:var(--blue) !important;
+}
+
+.service-btn{
+    background:var(--yellow) !important;
+    color:#fff !important;
+}
+
+.service-btn:hover{
+    background:var(--deep-blue) !important;
+}
+
+/* ================= VEHICLE SECTIONS ================= */
+.outstation,
+.local-taxi,
+.airport-transfer{
+    background:#F4FAFD !important;
+}
+
+.vehicle-slider{
+    gap:22px !important;
+}
+
+.vehicle-card{
+    background:#fff !important;
+    border:1px solid var(--border) !important;
+    border-radius:18px !important;
+    box-shadow:var(--shadow-blue) !important;
+}
+
+.vehicle-card:hover{
+    box-shadow:0 20px 45px rgba(8,43,92,.16) !important;
+}
+
+.vehicle-badge{
+    background:var(--yellow) !important;
+    color:#fff !important;
+}
+
+.vehicle-badge.premium{
+    background:var(--blue) !important;
+}
+
+.vehicle-badge.luxury{
+    background:var(--yellow) !important;
+    color:#fff !important;
+}
+
+.vehicle-content h3{
+    color:var(--deep-blue) !important;
+}
+
+.vehicle-name,
+.vehicle-info{
+    color:var(--text) !important;
+}
+
+.vehicle-info i{
+    color:var(--blue) !important;
+}
+
+.price-box{
+    border-color:var(--border) !important;
+}
+
+.price-box .price{
+    color:var(--deep-blue) !important;
+}
+
+.price-box strong{
+    color:var(--blue) !important;
+}
+
+.book-btn,
+.vehicle-content .btn{
+    background:var(--deep-blue) !important;
+    color:#fff !important;
+}
+
+.book-btn:hover,
+.vehicle-content .btn:hover{
+    background:var(--yellow) !important;
+}
+
+.slide-btn{
+    background:#fff !important;
+    color:var(--deep-blue) !important;
+    border:1px solid var(--border) !important;
+}
+
+.slide-btn:hover{
+    background:var(--deep-blue) !important;
+    color:#fff !important;
+}
+
+/* ================= DESTINATIONS ================= */
+.destinations{
+    background:#EAF7FD !important;
+}
+
+.destination-card{
+    background:#fff !important;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-blue) !important;
+}
+
+.price-tag{
+    background:var(--yellow) !important;
+}
+
+.destination-content h3{
+    color:var(--deep-blue) !important;
+}
+
+.rating{
+    color:var(--yellow-dark) !important;
+}
+
+.explore-btn{
+    color:var(--blue) !important;
+}
+
+.explore-btn:hover{
+    color:var(--deep-blue) !important;
+}
+
+/* ================= ABOUT / TRUSTED PARTNER ================= */
+.about{
+    background:#F7FCFF !important;
+}
+
+.about-card{
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-blue) !important;
+}
+
+.about-card i{
+    color:var(--blue) !important;
+}
+
+.about-card h3{
+    color:var(--deep-blue) !important;
+}
+
+.btn-primary{
+    background:var(--deep-blue) !important;
+}
+
+.btn-primary:hover{
+    background:var(--blue) !important;
+}
+
+.btn-outline{
+    border-color:var(--deep-blue) !important;
+    color:var(--deep-blue) !important;
+}
+
+.btn-outline:hover{
+    background:var(--deep-blue) !important;
+    color:#fff !important;
+}
+
+/* ================= WHY CHOOSE US ================= */
+.why-us{
+    background:#EAF7FD !important;
+}
+
+.experience-card{
+    background:linear-gradient(135deg,var(--deep-blue),var(--blue)) !important;
+    box-shadow:0 20px 45px rgba(8,43,92,.25) !important;
+}
+
+.icon{
+    background:var(--deep-blue) !important;
+}
+
+.feature-card{
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-blue) !important;
+}
+
+.feature-card h4{
+    color:var(--deep-blue) !important;
+}
+
+/* ================= STATS ================= */
+.stats{
+    background:linear-gradient(135deg,var(--deep-blue),#145A7A) !important;
+}
+
+.stats .stat-card,
+.stats .stat-item{
+    background:rgba(255,255,255,.10) !important;
+    border:1px solid rgba(255,255,255,.16);
+}
+
+.stats h2,
+.stats h3,
+.stats p,
+.stats span{
+    color:#fff !important;
+}
+
+.stats i{
+    color:var(--yellow) !important;
+}
+
+/* ================= FLEET ================= */
+.fleet{
+    background:#F7FCFF !important;
+}
+
+.fleet-card,
+.car-card{
+    background:#fff !important;
+    border:1px solid var(--border) !important;
+    box-shadow:var(--shadow-blue) !important;
+}
+
+.fleet-card h3,
+.car-card h3{
+    color:var(--deep-blue) !important;
+}
+
+/* ================= CTA ================= */
+.cta{
+    background:linear-gradient(135deg,#EAF7FD,#D9F1FC) !important;
+}
+
+.cta-box{
+    background:#fff !important;
+    border:1px solid var(--border) !important;
+    box-shadow:0 20px 55px rgba(8,43,92,.14) !important;
+}
+
+.cta-tag{
+    background:var(--blue-soft) !important;
+    color:var(--blue) !important;
+}
+
+.cta-box h2{
+    color:var(--deep-blue) !important;
+}
+
+.cta-box p{
+    color:var(--text) !important;
+}
+
+.cta-buttons .btn{
+    background:var(--yellow) !important;
+}
+
+.cta-buttons .btn:hover{
+    background:var(--deep-blue) !important;
+}
+
+.outline-btn{
+    border-color:var(--deep-blue) !important;
+    color:var(--deep-blue) !important;
+}
+
+.outline-btn:hover{
+    background:var(--deep-blue) !important;
+    color:#fff !important;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+    background:var(--deep-blue) !important;
+    color:#fff !important;
+    border-top:4px solid var(--nav-blue-3);
+}
+
+.footer::before{
+    background:var(--yellow) !important;
+}
+
+.footer h2,
+.footer h3{
+    color:#fff !important;
+}
+
+.footer h3::after{
+    background:var(--yellow) !important;
+}
+
+.footer ul li a,
+.footer-about p,
+.footer-contact p,
+.footer-bottom p{
+    color:#C9E5F2 !important;
+}
+
+.footer ul li a:hover,
+.footer-contact p a:hover{
+    color:var(--yellow) !important;
+}
+
+.footer-grid > div:nth-child(2) ul li a::before,
+.footer-grid > div:nth-child(3) ul li a::before{
+    color:var(--yellow) !important;
+}
+
+.footer-contact p > i{
+    color:var(--yellow) !important;
+}
+
+.footer-contact p:nth-of-type(3) i{
+    color:#55D889 !important;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.14) !important;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+.back-top{
+    background:var(--deep-blue) !important;
+}
+
+.whatsapp{
+    background:#25D366 !important;
+}
+
+/* ================= LOADER ================= */
+.loader{
+    background:#F7FCFF !important;
+}
+
+.loader-circle{
+    border-color:#D8EAF3 !important;
+    border-top-color:var(--blue) !important;
+}
+
+/* ================= SMALL DETAILS ================= */
+button:hover,
+a:hover{
+    transition:.3s ease;
+}
+
+@media(max-width:768px){
+    .header{
+        background:linear-gradient(180deg,var(--nav-blue-1),var(--nav-blue-2)) !important;
+    }
+
+    .nav-menu{
+        background:linear-gradient(180deg,#EAF7FD,#CDEDFB) !important;
+    }
+
+    .nav-menu a{
+        color:var(--deep-blue) !important;
+    }
+
+    .nav-menu a:hover{
+        color:var(--yellow-dark) !important;
+    }
+}
