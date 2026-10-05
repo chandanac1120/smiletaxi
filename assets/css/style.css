@@ -116,11 +116,11 @@ button, input, select {
     width:100%;
     z-index:999;
     transition:.4s;
-    background:#F5EFD6;
+    background:#10100f;
 }
 
 .header.sticky{
-    background:#F5EFD6;
+    background:#10100f;
     backdrop-filter:blur(15px);
     box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
@@ -155,8 +155,8 @@ button, input, select {
 }
 
 .logo-icon{
-    width:95px;
-    height:95px;
+    width:105px;
+    height:105px;
 }
 
 .logo-text{
@@ -207,7 +207,7 @@ button, input, select {
 }
 
 .nav-menu a{
-    color:#0d0c0c;
+    color:#fff;
     font-weight:500;
     position:relative;
     transition:.3s;
@@ -1297,95 +1297,569 @@ CTA SECTION
 }
 
 }
+/* =========================================================
+   SMILE TAXI SERVICE — FOOTER
+========================================================= */
 
-/*==============================
-FOOTER
-==============================*/
-
-.footer{
-    background: #F5EFD6;
-    color:#151414;
-    padding:100px 0 30px;
+.footer {
+    width: 100%;
+    background: #10172f;
+    color: #ffffff;
+    padding: 70px 0 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 2fr 1.8fr;
-    gap:50px;
+/* subtle yellow top line */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ffbd17;
 }
 
-.footer h2,
-.footer h3{
-    margin-bottom:20px;
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.footer .container {
+    width: min(1250px, 92%);
+    margin: 0 auto;
 }
 
-.footer p{
-    line-height:1.8;
-    color:#0a0909;
+
+/* =========================================================
+   FOOTER GRID
+========================================================= */
+
+.footer-grid {
+    display: grid;
+
+    /*
+       About
+       Quick Links
+       Vehicles
+       Map
+       Contact
+    */
+    grid-template-columns:
+        1.35fr
+        0.8fr
+        0.8fr
+        1.25fr
+        1.25fr;
+
+    gap: 40px;
+
+    padding-bottom: 55px;
 }
 
-.footer ul{
-    list-style:none;
-    padding:0;
+
+/* =========================================================
+   ALL FOOTER HEADINGS
+========================================================= */
+
+.footer h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 15px 0 14px;
 }
 
-.footer ul li{
-    margin-bottom:15px;
-    color:#0a0909;
+.footer h3 {
+    position: relative;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    margin: 4px 0 25px;
+
+    padding-bottom: 12px;
 }
 
-.footer ul li a{
-    color:#080808;
-    transition:.3s;
+/* small yellow line under heading */
+
+.footer h3::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 38px;
+    height: 3px;
+
+    background: #ffbd17;
+
+    border-radius: 5px;
 }
 
-.footer ul li a:hover{
-    color:#00B894;
+
+/* =========================================================
+   FOOTER ABOUT
+========================================================= */
+
+.footer-about {
+    padding-right: 15px;
 }
 
-.footer-contact p a{
-    color:#0b0c0c;
-    text-decoration:none;
-    transition:.3s;
+/* Logo */
+
+.footer-about .logo {
+    display: inline-flex;
+    align-items: center;
+
+    width: 145px;
+    height: 70px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    padding: 5px 10px;
+
+    margin-bottom: 5px;
+
+    overflow: hidden;
 }
 
-.footer-contact p a:hover{
-    color:#00B894;
+.footer-about .logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
 }
 
-.footer-contact i{
-    color:#00B894;
+
+/* About title */
+
+.footer-about h2 {
+    margin-top: 8px;
 }
 
-.social-icons{
-    display:flex;
-    gap:15px;
-    margin-top:25px;
+
+/* About paragraph */
+
+.footer-about p {
+    max-width: 270px;
+
+    color: #b9c1d1;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    margin: 0;
 }
 
-.social-icons a{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    background:#00B894;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    transition:.3s;
+
+/* =========================================================
+   FOOTER LISTS
+========================================================= */
+
+.footer ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
 }
 
-.social-icons a:hover{
-    background:#FFB703;
-    transform:translateY(-5px);
+.footer ul li {
+    margin-bottom: 13px;
 }
 
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.1);
-    margin-top:50px;
-    padding-top:20px;
-    text-align:center;
-    color:#bbb;
+
+/* Links */
+
+.footer ul li a {
+    color: #b9c1d1;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+/* Link hover */
+
+.footer ul li a:hover {
+    color: #ffbd17;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   VEHICLES
+========================================================= */
+
+.footer-grid > div:nth-child(3) ul li a::before {
+    content: "›";
+
+    color: #ffbd17;
+
+    margin-right: 8px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   QUICK LINKS ICON
+========================================================= */
+
+.footer-grid > div:nth-child(2) ul li a::before {
+    content: "›";
+
+    color: #ffbd17;
+
+    margin-right: 8px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.footer-grid > div:nth-child(4) {
+    min-width: 0;
+}
+
+.footer-grid > div:nth-child(4) iframe {
+    display: block;
+
+    width: 100%;
+    height: 215px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    filter: grayscale(15%);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.footer-contact {
+    min-width: 0;
+}
+
+
+/* Contact paragraphs */
+
+.footer-contact p {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin: 0 0 17px;
+
+    color: #b9c1d1;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* Contact icons */
+
+.footer-contact p > i {
+    flex-shrink: 0;
+
+    width: 19px;
+
+    color: #ffbd17;
+
+    font-size: 15px;
+
+    margin-top: 3px;
+
+    text-align: center;
+}
+
+
+/* Contact links */
+
+.footer-contact p a {
+    color: #b9c1d1;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Contact hover */
+
+.footer-contact p a:hover {
+    color: #ffbd17;
+}
+
+
+/* =========================================================
+   PHONE / WHATSAPP
+========================================================= */
+
+.footer-contact p:nth-of-type(2) a,
+.footer-contact p:nth-of-type(3) a {
+    font-weight: 500;
+}
+
+
+/* WhatsApp icon */
+
+.footer-contact p:nth-of-type(3) i {
+    color: #25d366;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #8994aa;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-grid {
+        grid-template-columns:
+            1.3fr
+            0.8fr
+            0.8fr;
+
+        gap: 35px;
+    }
+
+    /* Map gets its own row */
+
+    .footer-grid > div:nth-child(4) {
+        grid-column: 1 / 3;
+    }
+
+    /* Contact */
+
+    .footer-contact {
+        grid-column: 3;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .footer {
+        padding-top: 55px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px 30px;
+    }
+
+    .footer-about {
+        grid-column: 1 / -1;
+    }
+
+    .footer-grid > div:nth-child(4) {
+        grid-column: 1 / -1;
+    }
+
+    .footer-contact {
+        grid-column: 1 / -1;
+    }
+
+    .footer-about p {
+        max-width: 450px;
+    }
+
+    .footer-grid > div:nth-child(4) iframe {
+        height: 250px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding-top: 50px;
+    }
+
+    .footer .container {
+        width: 90%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+
+        padding-bottom: 40px;
+    }
+
+    .footer-about,
+    .footer-grid > div:nth-child(4),
+    .footer-contact {
+        grid-column: auto;
+    }
+
+    /* Logo */
+
+    .footer-about .logo {
+        width: 135px;
+        height: 65px;
+    }
+
+    /* About */
+
+    .footer-about h2 {
+        font-size: 20px;
+    }
+
+    .footer-about p {
+        max-width: 100%;
+
+        font-size: 13px;
+    }
+
+    /* Headings */
+
+    .footer h3 {
+        font-size: 16px;
+
+        margin-bottom: 20px;
+    }
+
+    /* Links */
+
+    .footer ul li {
+        margin-bottom: 12px;
+    }
+
+    .footer ul li a {
+        font-size: 13px;
+    }
+
+    /* Map */
+
+    .footer-grid > div:nth-child(4) iframe {
+        height: 230px;
+
+        border-radius: 8px;
+    }
+
+    /* Contact */
+
+    .footer-contact p {
+        font-size: 13px;
+
+        margin-bottom: 15px;
+    }
+
+    /* Bottom */
+
+    .footer-bottom {
+        min-height: 75px;
+
+        padding: 15px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .footer {
+        padding-top: 45px;
+    }
+
+    .footer-about .logo {
+        width: 125px;
+        height: 60px;
+    }
+
+    .footer h2 {
+        font-size: 19px;
+    }
+
+    .footer h3 {
+        font-size: 15px;
+    }
+
+    .footer-contact p {
+        font-size: 12px;
+    }
+
+    .footer-grid > div:nth-child(4) iframe {
+        height: 210px;
+    }
 }
 
 /* Floating Buttons */
